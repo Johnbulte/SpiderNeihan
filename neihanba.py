@@ -20,7 +20,7 @@ class BaiduImageSpider:
         self.baseurl = "https://www.neihan8.com"
         self.headers = {'User-Agent': 'Mozilla/5.0(compatible;MSIE9.0;WindowsNT6.1;Trident/5.0;'}
         self.proxies={"HTTP":"110.73.7.64:8123"}
-        self.basepage = "http://tieba.baidu.com/index_"
+        self.basepage = "http://www.neihan8.com/gif/index_"
     
     
     #获取每个帖子的url,html
@@ -60,7 +60,7 @@ class BaiduImageSpider:
         html = res.content
         #保存到本地
         filename = i[-10:]
-        with open(filename,"wb") as f:
+        with open('内涵动图/'+filename,"wb") as f:
             print('%s正在下载'%filename)
             f.write(html)
             print('%s下载成功'%filename)
